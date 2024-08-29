@@ -1,13 +1,10 @@
 ---
 layout: page
-title: country generator
+title:  🌍 Random Country Generator
 permalink: /about/
 ---
-
-Created by ahmad
-
-# 🌍 Random Country Generator
-
+ 
+ # 🌍 Random Country Generator
 Click the button below to get a random country!
 
 <button onclick="generateRandomCountry()">Generate Country</button>
@@ -30,3 +27,39 @@ Click the button below to get a random country!
     document.getElementById('countryDisplay').innerText = countries[randomIndex];
   }
 </script>
+
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Quiz</title>
+</head>
+<body>
+    <h1>mini Quiz💪🧠</h1>
+    <form id="quizForm">
+        <p>1. What is the capital of France?</p>
+        <input type="radio" id="paris" name="q1" value="paris">
+        <label for="paris">Paris</label><br>
+        <input type="radio" id="rome" name="q1" value="rome">
+        <label for="rome">Rome</label><br>
+        <input type="radio" id="berlin" name="q1" value="berlin">
+        <label for="berlin">Berlin</label><br>
+        <button type="button" onclick="submitQuiz()">Submit</button>
+    </form>
+
+    <script>
+        function submitQuiz() {
+            const form = document.getElementById('quizForm');
+            const answer = form.q1.value;
+            if (answer === 'paris') {
+                alert('Correct!');
+            } else {
+                alert('Try again.');
+            }
+        }
+    </script>
+</body>
+</html>
+

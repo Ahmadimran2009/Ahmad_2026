@@ -1,6 +1,6 @@
 ---
-layout: post
-title: ???
+layout: page
+title: interactive map🗺️
 toc: true
 ---
 

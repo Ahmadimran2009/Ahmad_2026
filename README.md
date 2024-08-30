@@ -12,7 +12,7 @@
     </style>
 </head>
 <body>
-    <h1>Interactive map so you can search for whatever you want.</h1>
+    <h1>Interactive map so you can search for whatever you want</h1>
     <div id="map"></div>
 
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>

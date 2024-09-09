@@ -9,57 +9,36 @@ image: /images/mario_animation.png
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ripple Effect</title>
+    <title>Button to Journey Page</title>
     <style>
-        body {
-            margin: 0;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: #333;
-            color: #fff;
-            font-family: Arial, sans-serif;
+        .my-button {
+            background-color: #808080; /* Green background */
+            border: none; /* Remove border */
+            color: white; /* White text */
+            padding: 15px 32px; /* Some padding */
+            text-align: center; /* Centered text */
+            text-decoration: none; /* Remove underline */
+            display: inline-block; /* Make the button inline */
+            font-size: 16px; /* Increase font size */
+            margin: 4px 2px; /* Margins */
+            cursor: pointer; /* Pointer cursor on hover */
+            border-radius: 8px; /* Rounded corners */
+            transition: background-color 0.3s ease; /* Smooth color transition */
         }
-
-        .ripple-container {
-            position: relative;
-            padding: 20px;
-            border: 2px solid #fff;
-            border-radius: 8px;
-            overflow: hidden;
-            cursor: pointer;
-            text-align: center;
-            font-size: 24px;
-            transition: background-color 0.3s;
-        }
-
-        .ripple-container::before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 300%;
-            height: 300%;
-            background: radial-gradient(circle, rgba(255,255,255,0.2) 10%, rgba(255,255,255,0) 50%);
-            transition: transform 0.6s, opacity 0.6s;
-            transform: translate(-50%, -50%) scale(1);
-            opacity: 0;
-            pointer-events: none;
-        }
-
-        .ripple-container:hover::before {
-            transform: translate(-50%, -50%) scale(0);
-            opacity: 1;
+        .my-button:hover {
+            background-color: #808080; /* Darker green on hover */
         }
     </style>
 </head>
 <body>
-    <div class="ripple-container">
-        <h1>Welcome to my page!👋</h1>
-    </div>
+    <!-- Anchor styled as a button -->
+    <a href="my%20jourey" class="my-button">Go to Journey Page</a>
 </body>
 </html>
+
+<p class=heb>
+Monkeys are fascinating primates known for their intelligence, agility, and social behavior. They are found in diverse habitats across the globe, from tropical rainforests to savannas, and they play crucial roles in their ecosystems. With over 260 species, monkeys exhibit a wide range of sizes, colors, and adaptations. Some, like the capuchin, are adept tool users, demonstrating remarkable problem-solving skills, while others, such as the howler monkey, are known for their distinctive vocalizations that can be heard over long distances. Monkeys live in complex social structures, often forming tight-knit groups where they engage in intricate social interactions, grooming, and play. Their behaviors and adaptability continue to intrigue researchers and animal enthusiasts alike, highlighting the rich diversity and evolutionary success of these remarkable animals.
+</p>
 <!-- Liquid:  statements -->
 
 <!-- Include submenu from _includes to top of pages -->
@@ -75,9 +54,8 @@ image: /images/mario_animation.png
 
 <p id="mario" class="sprite"></p>
   
-<!--- Embedded Cascading Style Sheet (CSS) rules, 
-        define how HTML elements look 
---->
+
+
 <style>
 
   /*CSS style rules for the id and class of the sprite...
@@ -243,3 +221,22 @@ image: /images/mario_animation.png
   });
 
 </script>
+<a href="https://www.treehugger.com/things-you-didnt-know-about-monkeys-4869728" style="font-size: 3vw;">interesting facts about monkeys!!!🙈 🙉 🙊 🐒</a>
+
+<a href="https://en.wikipedia.org/wiki/Pakistan" style="font-size: 3vw;">Pakistan Zindabad!!!</a>
+
+
+<p class=heb>
+Pakistan is a diverse and culturally rich country located in South Asia, bordered by India, Afghanistan, Iran, and China. Established in 1947, it was created as a separate nation for Muslims of the Indian subcontinent, and it has a complex history shaped by its unique geographical and cultural landscapes. Pakistan is known for its stunning natural beauty, which includes the towering peaks of the Himalayas and the Karakoram Range, the lush greenery of the Punjab region, and the arid expanses of the Balochistan desert. The country boasts a rich cultural heritage that reflects a blend of South Asian, Central Asian, and Middle Eastern influences. Its cities, such as Karachi, Lahore, and Islamabad, are vibrant centers of commerce, history, and culture. Pakistan also has a growing economy and is strategically important in regional and global geopolitics. Despite facing various challenges, Pakistan continues to be a nation with a deep historical legacy and a dynamic, evolving identity.
+</p>
+
+
+<style>
+    .heb {
+        position: relative;
+        
+        border-style: dotted;
+    }
+</style>
+
+

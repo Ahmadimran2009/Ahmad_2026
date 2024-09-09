@@ -42,8 +42,6 @@ permalink: /aboutme/
 
 
 Hi my name is Ahmad. I am 15 years old and I am from pakistan. I was born in Pakistan in may 28th 2009 and lived there for 2 years. I later moved to Denmark where my brother was born. Then I moved to Ireland and I lived there for 7 years attending grades 2-7 there and lived there for most of my life. Then in 2021 I moved to San diego, California and attended 8th grade in oak valley middle school and I am now currently in 10th grade at Del Norte highschool. Some of my hobbies are playing soccer, hanging out with friends and traveling.
-
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">

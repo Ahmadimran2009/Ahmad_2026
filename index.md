@@ -5,6 +5,10 @@ description: Home page
 hide: true
 image: /images/mario_animation.png
 ---
+
+<img src="images/PHOTO-2024-09-09-16-03-13.jpg" style="width:50%">
+
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -35,6 +39,117 @@ image: /images/mario_animation.png
     <a href="my%20jourey" class="my-button">Go to Journey Page</a>
 </body>
 </html>
+<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirect Button</title>
+    <style>
+        .redirect-button {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .redirect-button:hover {
+            background-color: #00000;
+        }
+    </style>
+</head>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirect Button</title>
+    <style>
+        .redirect-button {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .redirect-button:hover {
+            background-color: #FF0000
+        }
+    </style>
+</head>
+<body>
+    <button class="redirect-button" onclick="window.location.href='https://clicktheredbutton.com/';">
+        Red button!
+    </button>
+</body>
+</html>
+<body>
+    <button class="redirect-button" onclick="window.location.href='https://www.cheetos.com/';">
+        Free Cheetos!!!
+    </button>
+</body>
+</html>
+
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.dropbtn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+</style>
+</head>
+<body style="background-color:white;">
+
+<h2>Hi, my name is Ahmad</h2>
+<p>Move the mouse over the button to open the dropdown menu.</p>
+
+<div class="dropdown">
+  <button class="dropbtn">sub menu</button>
+  <div class="dropdown-content">
+    <a href="#"><a href="http://127.0.0.1:4100/student_2025/aboutme/">about me</a>
+</a>
+    <a href="http://localhost:8888/notebooks/student_2025/Untitled.ipynb?kernel_name=python3">notebook</a>
+    <a href="http://127.0.0.1:4100/student_2025/about/">countries</a>
+  </div>
+</div>
+
+</body>
+</html>
+
 
 <p class=heb>
 Monkeys are fascinating primates known for their intelligence, agility, and social behavior. They are found in diverse habitats across the globe, from tropical rainforests to savannas, and they play crucial roles in their ecosystems. With over 260 species, monkeys exhibit a wide range of sizes, colors, and adaptations. Some, like the capuchin, are adept tool users, demonstrating remarkable problem-solving skills, while others, such as the howler monkey, are known for their distinctive vocalizations that can be heard over long distances. Monkeys live in complex social structures, often forming tight-knit groups where they engage in intricate social interactions, grooming, and play. Their behaviors and adaptability continue to intrigue researchers and animal enthusiasts alike, highlighting the rich diversity and evolutionary success of these remarkable animals.
@@ -238,5 +353,3 @@ Pakistan is a diverse and culturally rich country located in South Asia, bordere
         border-style: dotted;
     }
 </style>
-
-

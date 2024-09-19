@@ -2,6 +2,7 @@
 layout: page
 title: about me⚽☪️
 permalink: /aboutme/
+comments: true
 ---
 <html lang="en">
 <head>
@@ -114,3 +115,15 @@ Hi my name is Ahmad. I am 15 years old and I am from pakistan. I was born in Pak
     </script>
 </body>
 </html>
+
+
+
+
+<script src="https://utteranc.es/client.js"
+        repo="Ahmadimran2009/Ahmad_2025"
+        issue-term="title"
+        label="blogpost-comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>

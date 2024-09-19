@@ -26,3 +26,7 @@ header_pages:
   - README4YML.md
   - navigation/aboutme.md
   - navigation/myjourney.md
+  - navigation/snake.md
+  - navigation/calculator.md
+  - navigation/cookieclicker.md
+  - navigation/music.md

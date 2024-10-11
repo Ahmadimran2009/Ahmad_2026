@@ -140,10 +140,10 @@ image: /images/mario_animation.png
 <div class="dropdown">
   <button class="dropbtn">sub menu</button>
   <div class="dropdown-content">
-    <a href="#"><a href="http://127.0.0.1:4100/student_2025/aboutme/">about me</a>
+    <a href="#"><a href="http://127.0.0.1:4100/Ahmad_2025/aboutme/">about me</a>
 </a>
-    <a href="http://localhost:8888/notebooks/student_2025/Untitled.ipynb?kernel_name=python3">notebook</a>
-    <a href="http://127.0.0.1:4100/student_2025/about/">countries</a>
+    <a href="http://127.0.0.1:4100/Ahmad_2025/calculator/">calculator</a>
+    <a href="http://127.0.0.1:4100/Ahmad_2025/cookieclicker/">cookie clicker</a>
   </div>
 </div>
 

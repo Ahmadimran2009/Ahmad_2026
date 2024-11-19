@@ -68,7 +68,7 @@ print(message)
 
 ```
 
-homework for 3.1, 3.2, and 3.4 :)
+homework for 3.1, 3.2, and 3.4 :
 
 ![image](../images/Screenshot2024-10-07143458.png)
 ![image](../images/Screenshot2024-10-09205114.png)

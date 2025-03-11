@@ -5,45 +5,17 @@ description: this is what I learned and did during Sprint 4
 type: issues
 comments: True
 ---
-# Fridge API blog
 
-The Fridge Feature helps users manage ingredients and discover recipes based on what they have on hand. Users can add ingredients (e.g., "tomato, mozzarella, basil") to their virtual fridge, which are stored and linked to their user ID for personalized use. Through various endpoints, users can add ingredients via a POST request, retrieve their stored ingredients with a GET request, or search for recipes that utilize their available items. This functionality simplifies meal planning and reduces waste by making the most of existing ingredients.
+Total score 59/67 (huge improvement from last time)
 
-# Frontend Features
+Total time spent- 03:26:23
 
-# Adding your ingredients
-<script>
-const addFridgeBtn = document.getElementById('addFridgeBtn');
-const ingredientsInput = document.getElementById('ingredients');
-const userIdInput = document.getElementById('user_id');
-const fridgeList = document.getElementById('fridgeList');
+<img src="{{site.baseurl}}/images/newmcq.png" alt="image">
 
-const API_URL = "http://localhost:8887/fridge";
+## weaknesses and how I will improve
 
-// Add ingredients to fridge
-addFridgeBtn.addEventListener('click', async () => {
-    try {
-        const response = await fetch(API_URL, {
-            method: 'POST', // Specifies a POST request
-            headers: {
-                'Content-Type': 'application/json', // Sets the content type as JSON
-            },
-            body: JSON.stringify({
-                ingredients: ingredientsInput.value, // Ingredients input by user
-                user_id: userIdInput.value,         // User ID input by user
-            }),
-        });
+Legal and ethical concerns- The one question I got wrong was number 51, as I did not fully understand all of the temrinology. I need to remember Creative Commons licensing allows copyright owners to specify the ways in which their works can be used or distributed. This allows individuals to access or modify these works without the risk of violating copyright laws.
 
-        if (!response.ok) {
-            throw new Error(`HTTP error! Status: ${response.status}`);
-        }
+Binary- I understand binary to a level but i find it difficult when binary is combined with other aspects. I will review the questions I got wrong, rewatch AP videos, and try to learn as much binary I can with the help of my dad who is really good binary
 
-        const data = await response.json();
-        alert('Ingredients added successfully');
-        displayFridgeItems(userIdInput.value); // Refreshes the fridge list for the user
-    } catch (error) {
-        console.error('Error:', error);
-        alert(`An error occurred: ${error.message}`);
-    }
-});
-</script>
+Identifying and correcting errors- Evaluate all options. I have a general idea of the answers because I got at least one question correct, but I need to be more careful when evaluating the second option and should read all choices rather than finding an option and moving on. Rewatch 1.4 Daily AP Videos 1-3.

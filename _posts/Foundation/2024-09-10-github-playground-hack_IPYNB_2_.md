@@ -1,21 +1,85 @@
 ---
 layout: post
-title: Sprint 4 reflection
-description: this is what I learned and did during Sprint 4
+title: Ahmads blog!!!
+description: click here to see my blog
 type: issues
 comments: True
 ---
 
-Total score 59/67 (huge improvement from last time)
+```python
+# Homework for 3.6 and 3.7
+# Function to classify age group
+def classify_age(age):
+    if 3 <= age <= 12:
+        return "Child"
+    elif 13 <= age <= 17:
+        return "Teenager"
+    else:
+        return "Adult"
 
-Total time spent- 03:26:23
+# Main program for age classification
+try:
+    # Get user input
+    age_input = int(input("Please enter your age: "))
+    # Classify and print result
+    age_group = classify_age(age_input)
+    print(f"You are classified as: {age_group}")
+except ValueError:
+    print("Please enter a valid number for age.")
 
-<img src="{{site.baseurl}}/images/newmcq.png" alt="image">
+```
 
-## weaknesses and how I will improve
+    You are classified as: Teenager
 
-Legal and ethical concerns- The one question I got wrong was number 51, as I did not fully understand all of the temrinology. I need to remember Creative Commons licensing allows copyright owners to specify the ways in which their works can be used or distributed. This allows individuals to access or modify these works without the risk of violating copyright laws.
 
-Binary- I understand binary to a level but i find it difficult when binary is combined with other aspects. I will review the questions I got wrong, rewatch AP videos, and try to learn as much binary I can with the help of my dad who is really good binary
 
-Identifying and correcting errors- Evaluate all options. I have a general idea of the answers because I got at least one question correct, but I need to be more careful when evaluating the second option and should read all choices rather than finding an option and moving on. Rewatch 1.4 Daily AP Videos 1-3.
+```python
+# Popcorn hack number 1: Example weather condition
+weather = "Sunny"
+if weather == "Sunny":
+    print("It's a bright day!")
+elif weather == "Rainy":
+    print("Don't forget your umbrella!")
+elif weather == "Cloudy":
+    print("It might rain later.")
+else:
+    print("Weather condition unknown.")
+
+```
+
+    It's a bright day!
+
+
+
+```python
+# Popcorn hack number 3: Classifying traffic light status
+light = "Yellow"
+message = (
+    "Go!" if light == "Green" else
+    "Slow down and prepare to stop." if light == "Yellow" else
+    "Stop!" if light == "Red" else
+    "Unknown light status."
+)
+print(message)
+
+```
+
+    Slow down and prepare to stop.
+
+
+
+```python
+# Popcorn hack number 3: Classifying traffic light status
+light = "Yellow"
+message = (
+    "Go!" if light == "Green" else
+    "Slow down and prepare to stop." if light == "Yellow" else
+    "Stop!" if light == "Red" else
+    "Unknown light status."
+)
+print(message)
+
+```
+
+    Slow down and prepare to stop.
+

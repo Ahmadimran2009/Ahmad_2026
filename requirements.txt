@@ -4,3 +4,8 @@ pyyaml
 notebook
 requests
 python-dotenv
+pandas
+numpy
+matplotlib
+seaborn
+scikit-learn

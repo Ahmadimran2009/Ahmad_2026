@@ -96,6 +96,8 @@ Monitor and respect trademark laws as well
 
 The MIT License allows others to freely use, modify, and distribute my code while requiring them to retain my original copyright notice. This ensures that my work gets credit while still enabling broad adoption and innovation. The simplicity of the MIT License makes it easy for developers to integrate my project into their own work without legal complications. By using this license, I maximize the accessibility and impact of my project.
 
+[My real license](https://github.com/Ahmadimran2009/Ahmad_2026/blob/main/LICENSE)
+
 
 
 

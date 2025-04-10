@@ -13,8 +13,11 @@ type: ccc
 Which of the following conditions must be met in order for the procedure to work as intended? Explain why.
 
 a. The length of numList must be even
+
 b. The list numList must not contain any duplicate values
+
 c. The values in numList must be in sorted order
+
 d. The value of target must not be equal to -1
 
 The answer is C because the list must be sorted because procedures like binary search use order to decide where to search next. Without sorting, the algorithm can't make correct decisions and may fail.

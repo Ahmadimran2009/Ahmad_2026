@@ -1,378 +1,267 @@
 ---
 layout: post
-title: Study guide
-description: My study guide for the course.
+title: Binary and logic gates
+description: notes on binary and logic gates
 courses: {'csp': {'week': 25}}
 author: Ahmad Imran
 type: ccc
 ---
 
-# 🖥️ Computer Science Exam Study Guide (AP/Intro Java)
-
-## 📘 Big Ideas
-
-| Big Idea | Description |
-|----------|-------------|
-| 1. Program Design and Algorithm Development | Writing code with logic, methods, and control structures. |
-| 2. Data Structures | Using arrays, ArrayLists, and 2D arrays to organize data. |
-| 3. Algorithms and Control Structures | Applying loops, conditionals, recursion to solve problems. |
-| 4. Code Implementation | Translating logic into Java syntax. |
-| 5. Code Analysis | Tracing and understanding what Java code does. |
-| 6. Computing Innovations | Broader social impacts of computing (lightly tested). |
-
+# Binary hacks
 ---
 
-## 📚 Table of Contents
+# popcorn hack 1
 
-1. [Java Basics](#java-basics)
-2. [Data Types & Variables](#data-types--variables)
-3. [Operators & Expressions](#operators--expressions)
-4. [Control Structures](#control-structures)
-5. [Objects & Classes](#objects--classes)
-6. [Arrays & ArrayLists](#arrays--arraylists)
-7. [Methods](#methods)
-8. [Inheritance & Polymorphism](#inheritance--polymorphism)
-9. [Searching & Sorting](#searching--sorting)
-10. [Error Handling](#error-handling)
-11. [FRQ Tips](#frq-tips)
-12. [MCQ Strategies](#mcq-strategies)
 
----
 
-## Java Basics
+```python
+def binary_to_decimal(binary_str):
+    decimal = 0
+    for i in range(len(binary_str)):
+        decimal += int(binary_str[-(i + 1)]) * (2 ** i)
+    return decimal
 
-```java
-public class MyClass {
-    public static void main(String[] args) {
-        System.out.println("Hello World!");
-    }
-}
+#Get user input
+binary_input = input("Enter a binary number: ")
+decimal_output = binary_to_decimal(binary_input)
+print(f"The decimal representation of {binary_input} is {decimal_output}.")
+
 ```
 
-- Single-line comment: `//`
-- Multi-line comment: `/* ... */`
+    The decimal representation of 1000100 is 68.
+
+
+# popcorn hack 2
+
+
+```python
+import random
+import time
+
+def binary_addition_battle():
+    num1 = bin(random.randint(0, 255))[2:]
+    num2 = bin(random.randint(0, 255))[2:]
+    
+    print("\n=== Binary Addition Battle ===")
+    print(f"Number 1: {num1}")
+    print(f"Number 2: {num2}")
+    
+    start_time = time.time()
+    user_answer = input("Your answer (in binary): ").strip()
+    end_time = time.time()
+    
+    correct_answer = bin(int(num1, 2) + int(num2, 2))[2:]
+    
+    if user_answer == correct_answer:
+        print(f"✅ Correct! You took {end_time - start_time:.2f} seconds. (+10 points)")
+        return 10
+    else:
+        print(f"❌ Wrong! Correct answer was {correct_answer}. (-5 points)")
+        return -5
+
+def binary_decimal_speed_challenge():
+    decimal_number = random.randint(0, 255)
+    binary_number = bin(random.randint(0, 255))[2:]
+    
+    print("\n=== Binary-Decimal Speed Challenge ===")
+    
+    # Decimal to Binary
+    print(f"Convert decimal {decimal_number} to binary:")
+    start_time = time.time()
+    user_binary = input("Your answer: ").strip()
+    correct_binary = bin(decimal_number)[2:]
+    end_time = time.time()
+    
+    points = 0
+    if user_binary == correct_binary:
+        print(f"✅ Correct! (+1 point)")
+        points += 1
+    else:
+        print(f"❌ Wrong! Correct answer: {correct_binary}")
+    
+    # Binary to Decimal
+    print(f"\nConvert binary {binary_number} to decimal:")
+    start_time2 = time.time()
+    user_decimal = input("Your answer: ").strip()
+    correct_decimal = str(int(binary_number, 2))
+    end_time2 = time.time()
+    
+    if user_decimal == correct_decimal:
+        print(f"✅ Correct! (+1 point)")
+        points += 1
+    else:
+        print(f"❌ Wrong! Correct answer: {correct_decimal}")
+    
+    print(f"Total time: {end_time - start_time + end_time2 - start_time2:.2f} seconds")
+    return points
+
+# Main game flow
+def play_game():
+    total_score = 0
+    print("🎮 Welcome to Popcorn Hack 2!\n")
+    
+    total_score += binary_addition_battle()
+    total_score += binary_decimal_speed_challenge()
+    
+    print(f"\n🏆 Final Score: {total_score} points")
+
+# Run the game
+play_game()
+
+```
+
+    🎮 Welcome to Popcorn Hack 2!
+    
+    
+    === Binary Addition Battle ===
+    Number 1: 11011101
+    Number 2: 1110100
+    ❌ Wrong! Correct answer was 101010001. (-5 points)
+    
+    === Binary-Decimal Speed Challenge ===
+    Convert decimal 237 to binary:
+    ❌ Wrong! Correct answer: 11101101
+    
+    Convert binary 1001100 to decimal:
+    ❌ Wrong! Correct answer: 76
+    Total time: 5.05 seconds
+    
+    🏆 Final Score: -5 points
+
+
+# Homework hack
+
+To convert a binary number to decimal, you multiply each bit by 2 raised to its position power (starting from the right at 0) and then add them up.
+
+For 11111111:
+Each bit is 1, so you add:
+2
+7
++
+2
+6
++
+2
+5
++
+2
+4
++
+2
+3
++
+2
+2
++
+2
+1
++
+2
+0
+=
+128
++
+64
++
+32
++
+16
++
+8
++
+4
++
+2
++
+1
+=
+255
+2 
+7
+ +2 
+6
+ +2 
+5
+ +2 
+4
+ +2 
+3
+ +2 
+2
+ +2 
+1
+ +2 
+0
+ =128+64+32+16+8+4+2+1=255
+
+✅ So, 11111111 in binary = 255 in decimal
 
 ---
 
-## Data Types & Variables
-
-| Type     | Example               | Description          |
-|----------|-----------------------|----------------------|
-| int      | int age = 17;         | Whole number         |
-| double   | double pi = 3.14;     | Decimal number       |
-| boolean  | boolean isOn = true;  | True or false        |
-| char     | char grade = 'A';     | Single character     |
-| String   | String name = "Bob";  | Sequence of characters |
+# Logic gate hacks
 
 ---
 
-## Operators & Expressions
+# popcorn hack 1
 
-- Arithmetic: `+`, `-`, `*`, `/`, `%`
-- Relational: `==`, `!=`, `<`, `>`, `<=`, `>=`
-- Logical: `&&`, `||`, `!`
-- Assignment: `=`, `+=`, `-=`, `*=`, `/=`
+**Q:**  
+What are methods of real-world purpose that using logic gates can implement? Explain deeper if using our listed impacts, explaining why this impact is helpful.
 
----
+**A:**  
+Logic gates are used in real-world systems like:
 
-## Control Structures
+- **Computers and Smartphones:**  
+  Logic gates control how computers perform calculations, store memory, and make decisions. Without logic gates, modern devices wouldn’t work because they need to process millions of logical operations every second.
 
-### If / Else
+- **Medical Devices:**  
+  Devices like pacemakers use logic gates to monitor and regulate heartbeats. This impact is **life-saving** because it ensures that if the heart’s rhythm is abnormal, the device automatically corrects it.
 
-```java
-if (x > 0) {
-    System.out.println("Positive");
-} else {
-    System.out.println("Zero or negative");
-}
+- **Traffic Lights:**  
+  Traffic light systems use logic gates to change lights based on sensors (like if a car is waiting). This is **helpful** because it improves traffic flow and safety, making streets more efficient and preventing accidents.
+
+- **Security Systems:**  
+  Alarm systems use logic gates to activate alarms only when certain conditions (like door open **and** motion detected) are true. This is **helpful** because it increases protection by being accurate — not triggering false alarms easily.
+
+# Popcorn Hack 2
+
+**Q:**  
+A digital circuit receives three binary inputs: X, Y, and Z. The circuit outputs 1 if and only if X AND Y are both 1, OR Z is 1.
+
+Which expression matches?
+
+**Answer:**  
+**A. (X AND Y) OR Z**
+
+**Explanation:**  
+- First, if both **X AND Y are 1**, the output should be 1.
+- Also, if **Z is 1** (no matter X or Y), the output should be 1.
+- That matches **(X AND Y) OR Z**.
+
+# homework hack
+
+
+```python
+def secure_entry_system(keycard, pin, voice_auth):
+    def AND(a, b):
+        return a & b  # AND logic
+
+    # All three conditions must be true
+    return AND(AND(keycard, pin), voice_auth)
+
+# Test cases
+print(secure_entry_system(1, 1, 1))  # Expected Output: 1 (Access Granted)
+print(secure_entry_system(1, 1, 0))  # Expected Output: 0 (Access Denied)
+print(secure_entry_system(1, 0, 1))  # Expected Output: 0 (Access Denied)
+print(secure_entry_system(0, 1, 1))  # Expected Output: 0 (Access Denied)
+
 ```
 
-### For Loop
+    1
+    0
+    0
+    0
 
-```java
-for (int i = 0; i < 5; i++) {
-    System.out.println(i);
-}
-```
 
-### While Loop
+Now you must have keycard, pin, and voice authorization all set to 1 to get access (1 = Access Granted).
 
-```java
-int i = 0;
-while (i < 5) {
-    System.out.println(i);
-    i++;
-}
-```
-
-### Do-While Loop
-
-```java
-int i = 0;
-do {
-    System.out.println(i);
-    i++;
-} while (i < 5);
-```
-
----
-
-## Objects & Classes
-
-### Defining a Class
-
-```java
-public class Dog {
-    private String name;
-
-    public Dog(String n) {
-        name = n;
-    }
-
-    public String getName() {
-        return name;
-    }
-}
-```
-
-### Using an Object
-
-```java
-Dog d = new Dog("Buddy");
-System.out.println(d.getName());
-```
-
----
-
-## Arrays & ArrayLists
-
-### Arrays
-
-```java
-int[] nums = {1, 2, 3};
-System.out.println(nums[0]);
-```
-
-### ArrayLists
-
-```java
-import java.util.ArrayList;
-
-ArrayList<String> list = new ArrayList<>();
-list.add("Hello");
-System.out.println(list.get(0));
-```
-
-| Method      | Description             |
-|-------------|-------------------------|
-| .add()      | Add element             |
-| .get()      | Access element          |
-| .set()      | Replace element         |
-| .remove()   | Remove element          |
-| .size()     | Get number of elements  |
-
----
-
-## Methods
-
-```java
-public static int square(int x) {
-    return x * x;
-}
-```
-
-- Parameters = Inputs
-- Return type = What it gives back
-- Void = No return value
-
----
-
-## Inheritance & Polymorphism
-
-### Inheritance
-
-```java
-public class Animal {
-    public void speak() {
-        System.out.println("Animal sound");
-    }
-}
-
-public class Dog extends Animal {
-    public void speak() {
-        System.out.println("Bark");
-    }
-}
-```
-
-### Polymorphism
-
-```java
-Animal a = new Dog();
-a.speak(); // Bark
-```
-
----
-
-## Searching & Sorting
-
-### Linear Search
-
-```java
-public int linearSearch(int[] arr, int target) {
-    for (int i = 0; i < arr.length; i++) {
-        if (arr[i] == target) return i;
-    }
-    return -1;
-}
-```
-
-### Binary Search (sorted array)
-
-```java
-public int binarySearch(int[] arr, int target) {
-    int low = 0, high = arr.length - 1;
-    while (low <= high) {
-        int mid = (low + high) / 2;
-        if (arr[mid] == target) return mid;
-        else if (arr[mid] < target) low = mid + 1;
-        else high = mid - 1;
-    }
-    return -1;
-}
-```
-
-### Selection Sort
-
-```java
-public void selectionSort(int[] arr) {
-    for (int i = 0; i < arr.length - 1; i++) {
-        int min = i;
-        for (int j = i + 1; j < arr.length; j++) {
-            if (arr[j] < arr[min]) {
-                min = j;
-            }
-        }
-        int temp = arr[i];
-        arr[i] = arr[min];
-        arr[min] = temp;
-    }
-}
-```
-
----
-
-## Error Handling
-
-### Types of Errors
-
-- Compile-time: Syntax issues
-- Run-time: Crashes (e.g., divide by 0)
-- Logic: Wrong result
-
-### Try-Catch
-
-```java
-try {
-    int x = 5 / 0;
-} catch (ArithmeticException e) {
-    System.out.println("Division by zero error");
-}
-```
-
----
-
-## FRQ Tips
-
-- Follow the method signature exactly.
-- Use helper methods to break down big problems.
-- Write comments if stuck: `// TODO: fix loop logic`
-- Loop through arrays with `.length` or `.size()`
-- Initialize all variables before use
-- Use consistent indentation and clear naming
-- Even partial work can earn points
-
----
-
-## MCQ Strategies
-
-- Underline key words in the question.
-- Eliminate obvious wrong choices.
-- Trace code step-by-step.
-- Watch out for:
-  - Off-by-one errors
-  - Integer division (`5 / 2 = 2`)
-  - `.equals()` vs `==` for Strings
-- If stuck, make your best guess—no penalty for wrong answers
-
-## 🧩 Big Ideas to Study
-
-### 1. 🛠️ Creative Development
-- Understand how programs are designed and developed.
-- Know what **collaborative programming** looks like (e.g., pair programming, version control).
-- Be able to **explain algorithms in plain English**—what each step does and why.
-
-### 2. 📊 Data
-- Learn how data is **stored, organized, and visualized**.
-- Identify **patterns and trends** in datasets.
-- Know different file formats like **CSV** and **JSON**, and understand the purpose of **metadata**.
-
-### 3. ⚙️ Algorithms and Programming
-- Master key programming concepts:
-  - **Searching and sorting**
-  - **Conditionals** (`if`, `else`)
-  - **Loops** (`for`, `while`)
-- Understand how **functions** work, including **parameters** and **return values**.
-- Be comfortable writing and reading **pseudocode**.
-
-### 4. 🌐 Computing Systems and Networks
-- Know how the **Internet** works, including:
-  - **IP addresses**
-  - **DNS**
-- Understand how data moves:
-  - **Packets**
-  - **Protocols** like **HTTP**, **TCP/IP**
-- Be able to explain common **cybersecurity risks**:
-  - **DDoS attacks**
-  - **Phishing**
-  - **Malware**
-
-### 5. 🌍 Impact of Computing
-- Be able to give examples of how computing affects:
-  - **Society**
-  - **Culture**
-  - **Economy**
-- Understand the **digital divide** and **bias in algorithms and data**.
-
----
-
-## 🧠 Key Vocabulary to Know
-
-- **Abstraction** – Simplifying complexity by hiding unnecessary detail.
-- **Algorithm** – A set of steps to solve a problem.
-- **Binary** – Base-2 number system (only 0s and 1s).
-- **Encryption** – Securing data through encoding.
-- **Lossless vs. Lossy Compression** – Keeping all data vs. removing less important data.
-- **Overflow Error** – When a calculation exceeds the limits of storage.
-- **Heuristic** – A quick, approximate method for problem-solving.
-- **Simulation** – Modeling real-world processes with a computer program.
-
----
-
-## ✅ Create Task Tips
-
-- **Clearly explain** your algorithm's purpose.
-- Use **selection** (`if` statements) and **iteration** (`loops`).
-- Demonstrate how your **data is used** to solve a problem.
-- Include **meaningful comments** in your code to improve clarity.
-
----
-
-## 📚 Study Tips
-
-- Practice writing in **pseudocode**—focus on logic, not syntax.
-- Use the **College Board's practice questions** and scoring guides.
-- Review your **Create Performance Task** and reflect on feedback.
-- Use **flashcards** or **quiz apps** to test yourself on vocab.
-
----
+If any one is missing (0), access is denied.
